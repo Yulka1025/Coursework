@@ -1,0 +1,50 @@
+:root{
+    --main-font: "Poppins"
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+}
+
+html {
+  font-family: var(--main-font);
+  box-sizing: border-box;
+  font-size: 14px;
+}
+/*-------------------header---------------------------------------*/
+.header__logo{
+    font-size: 36px;
+    font-weight: 400;
+    color: transparent;
+    width: 106px;
+    height: 54px;
+    color: #000;
+}
+.header__logo>span{
+    color: #939393;
+}
+.header__menu-list{
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(38, 50, 56, 1);
+    display: flex;
+    gap: 10px;
+}
+.header__conteiner{
+    display: flex;
+}
+.header__button{
+    color: font-size: 20px;
+    font-family: "Poppins";
+    font-weight: 500;
+    color: rgba(38, 50, 56, 1);
+    width: 772px;
+    height: 30px;;
+}
