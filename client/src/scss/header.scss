@@ -1,0 +1,123 @@
+//====================================================================================================
+
+//====================================================================================================
+
+//Burger
+/*
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 5;
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			left: 0px;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: #000;
+		}
+		&::before {
+			top: 0px;
+		}
+		&::after {
+			bottom: 0px;
+		}
+		span {
+			top: calc(50% - 1px);
+		}
+		.menu-open & {
+			span {
+				transform: scale(0);
+			}
+			&::before {
+				transform: rotate(-45deg);
+				top: calc(50% - 1px);
+			}
+			&::after {
+				transform: rotate(45deg);
+				bottom: calc(50% - 1px);
+			}
+		}
+	}
+}
+*/
+
+.header {
+	margin-top: 31px;
+
+	&__conteiner {
+		display: flex; 
+		justify-content: space-between;
+		align-items: center;
+		margin: auto;
+		width: 100%;
+		max-width: 1200px; 
+	}
+
+	&__logo {
+		font-size: 36px;
+		font-weight: 400;
+		color: transparent;
+		color: #000;
+
+		span {
+			color: #939393;
+		}
+	}
+
+	&__menu-list {
+		display: flex;
+		gap: 38px;
+		list-style-type: none;
+	}
+
+	&__menu-link {
+		font-size: 20px;
+		font-weight: 500;
+		color: rgba(38, 50, 56, 1);
+		position: relative;
+		display: inline-block;
+		text-decoration: none;
+
+		&::after {
+			content: '';
+			position: absolute;
+			width: 0;
+			height: 2px;
+			bottom: -5px;
+			left: 50%;
+			transition: width 0.3s ease, left 0.3s ease;
+		}
+
+		&:hover::after {
+			width: 100%;
+			left: 0;
+			background-color: rgba(38, 50, 56, 1); 
+		  }
+		  
+	}
+
+	&__button {
+		font-size: 20px;
+		font-family: "Poppins";
+		font-weight: 500;
+		color: rgba(38, 50, 56, 1);
+		padding: 17px 57px;
+		border: 2px solid #000;
+		border-radius: 4px;
+		transition: 3ms;
+
+		&:hover{
+			color: #fff;;
+			background-color: #263238;
+		  }
+	}
+}

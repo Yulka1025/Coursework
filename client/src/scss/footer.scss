@@ -1,0 +1,27 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    border-top: 2px solid #C4C4C4;
+    &__footer__div{
+        justify-content: space-between;
+    }
+    &__link {
+        font-size: 16px;
+        font-family: "Poppins";
+        font-weight: 400;
+        color: rgba(143, 149, 165, 1);
+        text-decoration: none;
+    }
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    &__link:not(:last-child)::after{
+        content: "•"; /* Додайте буллети між посиланнями */
+        color: rgba(143, 149, 165, 1); /* Колір буллетів */  
+    }
+}

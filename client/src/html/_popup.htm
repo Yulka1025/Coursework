@@ -1,0 +1,49 @@
+<div class="modal " data-modal>
+	<div class="modal__window">
+		<button data-modal-close class="modal__close-button">
+			<svg class="modal__close-icon" width="18" height="18">
+				<use class="close-icon" href="../img/symbol-defs.svg#icon-close"></use>
+			</svg>
+		</button>
+		<h2 class="modal__description">Залиште свої дані, ми вам передзвонимо</h2>
+		<form class="modal__form" id="form">
+			<div class="modal__topic">
+				<label class="modal__label" for="name">Ім'я</label>
+				<input class="modal__input" type="text" id="name" name="name" placeholder="">
+				<svg class="modal__input-icon" width="18" height="18">
+					<use href="../img/symbol-defs.svg#icon-person-black-18dp-1"></use>
+				</svg>
+			</div>
+			<div class="modal__topic">                    
+				<label class="modal__label" for="phone">Телефон</label>
+				<input class="modal__input" type="tel" id="phone" name="tel" placeholder="">
+				<svg class="modal__input-icon" width="18" height="18">
+					<use href="../img/symbol-defs.svg#icon-phone-black-18dp-1"></use>
+				</svg>
+			</div>
+			<div class="modal__topic">
+				<label class="modal__label" for="email">Пошта</label>
+				<input class="modal__input" type="email" id="email" name="email" placeholder="">
+				<svg class="modal__input-icon" width="18" height="18">
+					<use href="../img/symbol-defs.svg#icon-email-black-18dp-1"></use>
+				</svg>
+			</div>
+			<div>
+				<label class="modal__label" for="comment">Коментар</label>
+				<textarea class="modal__textarea" id="comment" name="message" placeholder="Введіть текст"></textarea>
+				<div class="modal__agree">
+					<input class="modal__checkbox-hidden" type="checkbox" id="agreement" name="agreement">
+					<label class="modal__checkbox" for="agreement">
+						<svg class="modal__agreement-check" width="16" height="15">
+							<use xlink:href="../img/symbol-defs.svg#icon-check"></use> 
+						</svg>
+						<p>
+							Погоджуюся з розсилкою та приймаю <a href="#">Умови договору</a>
+						</p>
+					</label>
+				</div>
+			</div>                
+			<button class="modal__submit-button" id="send-data" type="submit">Відправити</button>
+		  </form>
+	</div>
+</div>
