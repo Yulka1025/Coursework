@@ -236,7 +236,10 @@
 .swiper-pagination-fraction {
 	bottom: 10px;
 	left: 0;
-	width: 100%;
+	width: 100vw;
+	margin-left: 100vw;
+	transform: translateX(-50%);	
+	// margin-left: 50px;
 }
 .swiper-pagination-bullets-dynamic {
 	overflow: hidden;

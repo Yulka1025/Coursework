@@ -39,7 +39,7 @@ button.addEventListener('click', (e) => {
 })
 
 function sendDataToMail(name, tel, email, message) {
-    fetch('http://127.0.0.1:3000/app/mail', {
+    fetch('http://127.0.0.1:3000/app/mail/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

@@ -4,7 +4,7 @@ import nodemailer from 'nodemailer'
 const router = new Router();
 
 router.get('/', (req, res) => {
-  res.send(`it's work`);
+  res.send('its work');
 })
 
 router.post('/mail', async (req, res) => {
@@ -15,15 +15,15 @@ router.post('/mail', async (req, res) => {
     port: 587,
     secure: false,
     auth: {
-      user: 'vitalii.bodiak@gmail.com', // твоя пошта
-      pass: 'cgju geva gybd sexa', // твій ключ
+      user: 'khitko.yulia@gmail.com', // твоя пошта
+      pass: 'ahtl arlw rglj bjkm', // твій ключ
     }
   })
 
   try {
     const info = await transporter.sendMail({
       from: email,
-      to: 'khitko.yulia@gmail.com', // теж 
+      to: 'khitko.1025@gmail.com', // теж 
       subject: 'Фідбек',
       text: 'Фідбек',
       html: `
@@ -85,7 +85,7 @@ router.post('/mail', async (req, res) => {
 
 </html>
 
-            ` // версту зміни через гпт
+            ` 
     })
     return res.json({ result: info.messageId });
   } catch (error) {
