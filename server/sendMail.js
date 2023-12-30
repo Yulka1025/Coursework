@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
 })
 
 router.post('/mail', async (req, res) => {
-  const { name, tel, email, message } = req.body;
+  const { email } = req.body;
 
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
@@ -75,10 +75,7 @@ router.post('/mail', async (req, res) => {
     <p>You have received feedback from a student:</p>
 
     <ul>
-      <li><strong>Student Name:</strong> ${name}</li>
       <li><strong>Student Email:</strong> ${email}</li>
-      <li><strong>Student Phone number:</strong> ${tel}</li>
-      <li><strong>Feedback:</strong> ${message}</li>
     </ul>
   </div>
 </body>

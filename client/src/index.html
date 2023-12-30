@@ -17,9 +17,11 @@
 					</div>
 					<p class="home__description-text">With our teachers who write a program for each student, you will
 						be able to make your first sketch after the first lesson.</p>
-					<button data-modal-open class="home__description-button">Get started</button>
+					<button class="home__description-button">Get started</button>
 				</div>
-				<img class="home__img-image" src="@img/Learning_languages-bro.jpg" alt="home image" width="661px" height="661px">
+				<div class="home__img">
+				<img class="home__img-image" src="@img/Learning_languages-bro.jpg" alt="home image">
+				</div>
 				</div>
 			</section>
 			<section class="skills" id="skills">
@@ -89,10 +91,10 @@
 				</div>
 			</section>
 			<section class="pricing" id="pricing">
-				<div class="container">
+				<div class="pricing__container">
 					<h2 class="pricing__title">Pricing</h2>
-					<div class="pricing__list">
-						<div class="pricing__item">
+					<ul class="pricing__list">
+						<li class="pricing__item">
 							<div class="pricing__img-wrapper">
 								<img class="pricing__img" src="@img/Online test-bro1.png" alt="online test">
 							</div>
@@ -104,9 +106,9 @@
 								<p class="pricing__count-money">£5.99</p>
 								<p class="pricing__count-time">per month</p>
 							</div>
-						</div>
-						<div class="pricing__item">
-							<div class="pricing__img-wrapper">
+						</li>
+						<li class="pricing__item">
+							<div class="pricing__img-wrapper pricing__img-help">
 								<img class="pricing__img" src="@img/Lesson-bro2.png" alt="lesson">				
 							</div>
 							<h3 class="pricing__secondary-title">Live online classes</h3>
@@ -116,8 +118,8 @@
 								<p class="pricing__count-money">£12.99</p>
 								<p class="pricing__count-time">per month</p>
 							</div>
-						</div>
-						<div class="pricing__item">
+						</li>
+						<li class="pricing__item">
 							<div class="pricing__img-wrapper">
 								<img class="pricing__img" src="@img/Webinar-bro2.png" alt="online test">
 							</div>
@@ -128,8 +130,8 @@
 								<p class="pricing__count-money">£20.99</p>
 								<p class="pricing__count-time">per month</p>
 							</div>
-						</div>
-					</div>
+						</li>
+					</ul>
 				</div>
 			</section>
 			<div class="pricing__wrapper">
@@ -184,20 +186,19 @@
 			</div>
 			<section class="contact" id="contact">
 				<div class="contact__container">
-					<div class="contact__img">
-						<img src="@img/1.jpg" alt="contact us">
+					<div >
+						<img class="contact__img" src="@img/1.jpg" alt="contact us">
 					</div>
 					<div class="contact__inner">
 						<h2 class="contact__title">Contact Us</h2>
 						<p class="contact__text">Discover your current English level by taking our free online English
 							test.Sign up to our newsletter for learning tips and free resources</p>
-						<form class="contact__form">
-							<div class="contact__input_inner">
-								<input class="contact__input" type="mail" name="e-mail" id="e-mail"
-								placeholder="Enter Your E-mail">
-							</div>
-							<button class="contact__button" type="submit">Subscribe</button>
-						</form>
+							<form class="contact__form" data-modal-open>
+								<div class="contact__input_inner">
+									<input class="contact__input" type="email" name="e-mail" id="e-mail" placeholder="Enter Your E-mail" required>
+								</div>
+								<button class="contact__button" type="submit">Subscribe</button>
+							</form>
 					</div>
 				</div>
 			</section>
