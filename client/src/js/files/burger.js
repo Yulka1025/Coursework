@@ -1,9 +1,21 @@
 const selector = {
     ["burger-button"]: document.querySelector(".burger-button"),
-    ["header__burger-menu"]: document.querySelector(".header__burger-menu")
+    ["header__burger-menu"]: document.querySelector(".header__burger-menu"),
+    ["nav__item"]: document.querySelectorAll(".nav__item")
  }
+
+
+export const closeBurgerMenu = () => {
+   const isOpenBurgerButton = selector["burger-button"]?.classList.contains("burger-button_open");
+
+   if (isOpenBurgerButton) {
+      selector["burger-button"]?.classList.remove("burger-button_open");
+      selector["header__burger-menu"]?.classList.remove("header__burger-menu_open");
+      document.body.classList.remove("block-scroll");
+   }
+}
  
- export const initialMenuBurger = () => {
+export const initialMenuBurger = () => {
     selector["burger-button"]?.addEventListener("click", () => {
        const isOpenBurgerButton = selector["burger-button"]?.classList.contains("burger-button_open")
        const isOpenBurgerMenu = selector["header__burger-menu"]?.classList.contains("header__burger-menu_open")
@@ -29,6 +41,13 @@ const selector = {
     
     window.addEventListener('resize', setVhVariable);
     setVhVariable();
+
+
+    selector["nav__item"].forEach(item => {
+      item.addEventListener("click", () => {
+         closeBurgerMenu();
+      })
+    });
  }
  
  

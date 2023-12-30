@@ -1,70 +1,42 @@
-//====================================================================================================
+$zIndexLogo: 11;
+$zIndexBurgerButton: 11;
+$zIndexBurgerMenu: 10;
 
-//====================================================================================================
 
-//Burger
+.block-scroll {
+	overflow: hidden;
+}
 
-// .icon-menu {
-// 	display: none;
-// 	@media (max-width: 980) {
-// 		display: block;
-// 		position: relative;
-// 		width: 30px;
-// 		height: 18px;
-// 		cursor: pointer;
-// 		z-index: 5;
-// 		span,
-// 		&::before,
-// 		&::after {
-// 			content: "";
-// 			transition: all 0.3s ease 0s;
-// 			left: 0px;
-// 			position: absolute;
-// 			width: 100%;
-// 			height: 2px;
-// 			background-color: #000;
-// 		}
-// 		&::before {
-// 			top: 0px;
-// 		}
-// 		&::after {
-// 			bottom: 0px;
-// 		}
-// 		span {
-// 			top: calc(50% - 1px);
-// 		}
-// 		.menu-open & {
-// 			span {
-// 				transform: scale(0);
-// 			}
-// 			&::before {
-// 				transform: rotate(-45deg);
-// 				top: calc(50% - 1px);
-// 			}
-// 			&::after {
-// 				transform: rotate(45deg);
-// 				bottom: calc(50% - 1px);
-// 			}
-// 		}
-// 	}
-// }
+.button {
+	font-size: 20px;
+	font-family: "Poppins";
+	font-weight: 500;
+	color: rgba(38, 50, 56, 1);
+	padding: 17px 57px;
+	border: 2px solid #000;
+	border-radius: 4px;
+	transition: 3ms;
+
+	&:hover {
+		color: #fff;;
+		background-color: #263238;
+	}
+}
 
 .header {
-	margin-top: 31px;
-
-	&__conteiner {
-		display: flex; 
-		justify-content: space-between;
+	&__container {
+		display: flex;
 		align-items: center;
-		margin: auto;
-		width: 100%;
-		max-width: 1360px; 
-		padding: 0 15px;
+		justify-content: space-between;
+
+		height: 100px;
+
 	}
 
 	&__logo {
+		position: relative;
+		z-index: $zIndexLogo;
 		font-size: 36px;
-		font-weight: 400;
 		color: transparent;
 		color: #000;
 
@@ -73,59 +45,174 @@
 		}
 	}
 
-	&__menu-list {
-		display: flex;
-		gap: 38px;
-		list-style-type: none;
-		@media screen and (max-width: 981px) {
+	&__nav {
+		@media (max-width: 992px) {
 			display: none;
 		}
-	}
-
-	&__menu-link {
-		font-size: 20px;
-		font-weight: 500;
-		color: rgba(38, 50, 56, 1);
-		position: relative;
-		display: inline-block;
-		text-decoration: none;
-
-		&::after {
-			content: '';
-			position: absolute;
-			width: 0;
-			height: 2px;
-			bottom: -5px;
-			left: 50%;
-			transition: width 0.3s ease, left 0.3s ease;
-		}
-
-		&:hover::after {
-			width: 100%;
-			left: 0;
-			background-color: rgba(38, 50, 56, 1); 
-		  }
-		  
 	}
 
 	&__button {
-		font-size: 20px;
-		font-family: "Poppins";
-		font-weight: 500;
-		color: rgba(38, 50, 56, 1);
-		padding: 17px 57px;
-		border: 2px solid #000;
-		border-radius: 4px;
-		transition: 3ms;
+		&_pc {
+			@media (max-width: 992px) {
+				display: none;
+			}
+		}
 
-		&:hover{
-			color: #fff;;
-			background-color: #263238;
-		  }
-	@media screen and (max-width: 981px) {
+
+	}
+
+	&__burger-menu {
+		position: fixed;
+		z-index: $zIndexBurgerMenu;
+		top: 0;
+		right: -100%;
+
+		display: flex;
+		overflow: auto;
+		align-items: center;
+		justify-content: center;
+
+		width: 100%;
+		height: calc(var(--vh, 1vh) * 100);
+   		padding: 48px 40px;
+
+		transition: right 0.3s ease;
+
+		background-color: #fff;
+
+		&_open {
+			right: 0;
+		}
+
+		@media (min-width: 992px) {
 			display: none;
 		}
-	}	
-	&__burger{
-	display: none;}
+	}
+
+	&__burger-button {
+		position: relative;
+		z-index: $zIndexBurgerButton;
+		@media (min-width: 992px) {
+			display: none !important;
+		}
+	}
+}
+.logo {
+}
+.nav {
+	$p: &;	
+
+	&_default {
+		
+
+		#{$p} {
+			&_burger-menu {
+				
+			}
+		
+			&__list {
+				column-gap: 32px;
+			}
+		
+			&__item {
+			}
+		
+			&__link {
+			}
+		}
+	}
+
+	&_burger-menu {
+		width: 100%;
+
+		#{$p} {
+		
+			&__list {
+				align-items: center;
+				flex-direction: column;
+				justify-content: center;
+
+				
+				row-gap: 32px;
+			}
+		
+			&__item {
+		
+			}
+		
+			&__link {
+				padding: 20px;
+
+				font-size: 36px;
+			}
+			
+		}
+	}
+
+	&__list {
+		display: flex;
+	}
+
+	&__item {
+		transition: transform 0.3s ease;
+		transform: scale(1);
+		&:active,
+		&:hover {
+			transform: scale(1.02);
+		}
+	}
+
+	&__link {
+		display: block;
+	}
+}
+
+
+
+
+.burger-button {
+   $p: &;
+   display: flex;
+   flex-direction: column;
+   gap: 4px;
+
+   
+
+   // .burger-button__item
+
+   &::before, &::after {
+      content: "";
+      transform: rotate(0);
+      transform-origin: 1.5px 50%;
+   }
+   
+
+   &__item, &::before, &::after {
+      width: 24px;
+      height: 3px;
+
+      transition: 
+         transform 0.3s ease,
+         opacity 0.3s ease;
+
+      background: #212121;
+   }
+
+
+   &_open {
+      #{$p} {
+         &__item {
+            opacity: 0;
+         }
+      }
+
+      &::after {
+         transform: rotate(-45deg);
+         
+      }
+      &::before {
+         transform: rotate(45deg);
+         
+      }
+   }
 }

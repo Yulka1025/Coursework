@@ -173,3 +173,7 @@ import * as flsScroll from "./files/scroll/scroll.js";
 import "./files/script.js";
 import "./files/burger.js";
 //============================================================================================================================================================================================================================================
+
+import { initialMenuBurger } from "./files/burger.js";
+
+initialMenuBurger();
