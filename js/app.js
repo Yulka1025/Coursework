@@ -4122,7 +4122,8 @@
           .then((e) => e.json())
           .then((t) => {
             console.log("Server response:", t.result),
-              e.modal.classList.remove("is-hidden");
+              e.modal.classList.remove("is-hidden"),
+              (e.form.querySelector("#e-mail").value = "");
           })
           .catch((e) => {
             console.error("Error:", e);
