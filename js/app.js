@@ -4114,7 +4114,7 @@
       e.form.addEventListener("submit", (t) => {
         t.preventDefault();
         const s = e.form.querySelector("#e-mail").value;
-        fetch("http://127.0.0.1:3000/app/mail/", {
+        fetch("https://gcg.onrender.com/app/mail/", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email: s }),
