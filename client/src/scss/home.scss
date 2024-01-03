@@ -802,7 +802,6 @@
         width: 100%;
         height: 100%;
         object-fit: contain;
-        object-position: bottom;
 
         &:not(:last-child) {
             margin-bottom: 50px;
@@ -1038,6 +1037,7 @@
 
     &__item {
         margin: 0 auto;
+        display: flex;
         @media (max-width: 767px){
             max-width: 350px;
             justify-content: center;

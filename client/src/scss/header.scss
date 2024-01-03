@@ -133,7 +133,8 @@ $zIndexBurgerMenu: 10;
 		#{$p} {
 		
 			&__list {
-				align-items: center;
+				margin-top: -200px;
+				position: fixed;
 				flex-direction: column;
 				justify-content: center;
 
