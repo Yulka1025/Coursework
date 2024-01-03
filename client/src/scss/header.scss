@@ -63,7 +63,7 @@ $zIndexBurgerMenu: 10;
 
 	&__burger-menu {
 		position: fixed;
-		z-index: $zIndexBurgerMenu;
+		z-index: 10;
 		top: 0;
 		right: -100%;
 
@@ -91,7 +91,7 @@ $zIndexBurgerMenu: 10;
 
 	&__burger-button {
 		position: relative;
-		z-index: $zIndexBurgerButton;
+		z-index: 11;
 		@media (min-width: 992px) {
 			display: none !important;
 		}
@@ -118,13 +118,18 @@ $zIndexBurgerMenu: 10;
 			}
 		
 			&__link {
-			}
-		}
+				font-size: 20px;
+			font-family: "Poppins";
+			font-weight: 500;
+			color: rgba(38, 50, 56, 1);
+			height: 30px;
+						}
+					}
 	}
 
 	&_burger-menu {
 		width: 100%;
-
+		
 		#{$p} {
 		
 			&__list {
@@ -133,7 +138,7 @@ $zIndexBurgerMenu: 10;
 				justify-content: center;
 
 				
-				row-gap: 32px;
+				row-gap: 40px;
 			}
 		
 			&__item {
@@ -141,9 +146,9 @@ $zIndexBurgerMenu: 10;
 			}
 		
 			&__link {
-				padding: 20px;
+				padding: 0 20px;
 
-				font-size: 36px;
+				font-size: 34px;
 			}
 			
 		}
@@ -153,15 +158,34 @@ $zIndexBurgerMenu: 10;
 		display: flex;
 	}
 
-	&__item {
-		transition: transform 0.3s ease;
-		transform: scale(1);
-		&:active,
-		&:hover {
-			transform: scale(1.02);
-		}
+	&__item {		  
 	}
-
+	&__link{
+			font-size: 20px;
+			font-weight: 500;
+			color: rgba(38, 50, 56, 1);
+			position: relative;
+			display: inline-block;
+			text-decoration: none;
+	
+			&::after {
+				content: '';
+				position: absolute;
+				width: 0;
+				height: 2px;
+				bottom: -5px;
+				left: 50%;
+				transition: width 0.3s ease, left 0.3s ease;
+			}
+	
+			&:hover::after {
+				width: 100%;
+				left: 0;
+				background-color: rgba(38, 50, 56, 1); 
+			  }
+	
+		}
+	
 	&__link {
 		display: block;
 	}

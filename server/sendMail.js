@@ -15,15 +15,15 @@ router.post('/mail', async (req, res) => {
     port: 587,
     secure: false,
     auth: {
-      user: 'khitko.yulia@gmail.com', // твоя пошта
-      pass: 'ahtl arlw rglj bjkm', // твій ключ
+      user: 'khitko.yulia@gmail.com',
+      pass: 'ahtl arlw rglj bjkm', 
     }
   })
 
   try {
     const info = await transporter.sendMail({
       from: email,
-      to: 'khitko.1025@gmail.com', // теж 
+      to: 'khitko.1025@gmail.com', 
       subject: 'Фідбек',
       text: 'Фідбек',
       html: `
