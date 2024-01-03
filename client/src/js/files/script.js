@@ -16,7 +16,7 @@
         event.preventDefault(); 
         const email = refs.form.querySelector('#e-mail').value;
 
-        fetch('http://127.0.0.1:3000/app/mail/', {
+        fetch('https://gcg.onrender.com/app/mail/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
