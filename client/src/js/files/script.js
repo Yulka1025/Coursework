@@ -15,6 +15,7 @@
     refs.form.addEventListener('submit', (event) => {
         event.preventDefault(); 
         const email = refs.form.querySelector('#e-mail').value;
+        
 
         fetch('https://gcg.onrender.com/app/mail/', {
             method: 'POST',
@@ -26,7 +27,8 @@
         .then(response => response.json())
         .then(data => {
             console.log('Server response:', data.result);
-            openModal(); 
+            openModal();
+            refs.form.querySelector('#e-mail').value = ''
         })
         .catch(error => {
             console.error('Error:', error);
